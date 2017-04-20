@@ -60,36 +60,39 @@
     background-color: #FFE0B2;
     color: #212121;
 }
+//---------Video-------
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
 //---------Box---------
+
 .box {
-    background-image: url("header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 -30px;
-    
-    //----video---
-    .video {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        z-index: 1;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        transform: translate(-50%, -50%);
-    }
-    //------
+    // // background-image: url("header.jpg");
+    // background-repeat: repeat-x;
+    // background-size: cover;
+    // margin: 0 -30px;
     .box-inner {
-        background-color: rgba(250, 250, 250, 0.69);
-        padding-bottom: 5px;
-        margin-top: 150px;
-        margin-bottom: 150px;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding-top: 70px;
+        padding-bottom: 70px;
+         letter-spacing: 15px;
     }
 
     .title {
         text-align: center;
+        color: #FAFAFA;
+        font-size: 50px;
         margin-bottom: 80px;
+        margin-top: 0;
+        padding-top: 20px;
     }
 
     .slogan {
@@ -104,10 +107,57 @@
     .lead {
         margin-bottom: 60px;
         text-align: center;
+        letter-spacing: 3px;
         color: white;
     }
 }
+//-----按钮
+ .btn-danger {
+     color: #fff;//字体颜色
+
+     background-color: #EF6C00;//背景颜色
+
+     border-color: #EF6C00;//边框颜色
+
+ }
+
+ .btn-danger:hover {
+     background-color: #E65100;//鼠标放置在btn上的背景颜色
+
+     border-color: #E65100;//鼠标放置在btn上的边框颜色
+
+ }
+
+  .btn-lg, .btn-group-lg > .btn {
+     padding: 8px 16px;//通过padding来决定btn的大小
+     font-size: 20px;//btn文字大小
+     letter-spacing: 3px;//调整文字间距
+     border-radius: 3px;//btn圆角
+     width: 200px;//这里用指定宽度把btn拉得更长
+ }
+//----ABOUT-----
+
+.sec-about {
+    font-family: 'Open sans', sans-serif;
+    padding: 4em 0;
+    background: #E0E0E0;
+    line-height: 1.42857143;
+    text-align: center;
+
+    h1 {
+        font-weight: 200;
+    }
+
+    p {
+        line-height: 1.5;
+        color: #333333;
+        font-weight: 100;
+        font-size: 16px;
+    }
+}
+//-----
 //---------Content---------
+
 .content-section-a {
     padding: 50px 0;
     margin: 0 -15px;
@@ -115,6 +165,7 @@
 }
 
 .content-section-b {
+    background-color: #ffffff;
     padding: 50px 0;
     margin: 0 -15px;
     border-bottom: 1px solid #e7e7e7;
@@ -137,6 +188,7 @@
     font-weight: 400;
 }
 //---------Footer---------
+
 footer {
     color: white;
 }
