@@ -87,6 +87,27 @@ html {
     color: #212121;
 }
 
+//-----按钮
+
+.btn-danger {
+    color: #fff; //字体颜色
+    background-color: #EF6C00; //背景颜色
+    border-color: #EF6C00; //边框颜色
+}
+
+.btn-danger:hover {
+    background-color: #E65100; //鼠标放置在btn上的背景颜色
+    border-color: #E65100; //鼠标放置在btn上的边框颜色
+}
+
+.btn-group-lg > .btn,
+.btn-lg {
+    padding: 8px 16px; //通过padding来决定btn的大小
+    font-size: 20px; //btn文字大小
+    letter-spacing: 3px; //调整文字间距
+    border-radius: 3px; //btn圆角
+    width: 200px; //这里用指定宽度把btn拉得更长
+}
 
 //-----注册----
 @import url(http://fonts.googleapis.com/css?family=Roboto);
@@ -247,27 +268,7 @@ html {
         color: white;
     }
 }
-//-----按钮
 
-.btn-danger {
-    color: #fff; //字体颜色
-    background-color: #EF6C00; //背景颜色
-    border-color: #EF6C00; //边框颜色
-}
-
-.btn-danger:hover {
-    background-color: #E65100; //鼠标放置在btn上的背景颜色
-    border-color: #E65100; //鼠标放置在btn上的边框颜色
-}
-
-.btn-group-lg > .btn,
-.btn-lg {
-    padding: 8px 16px; //通过padding来决定btn的大小
-    font-size: 20px; //btn文字大小
-    letter-spacing: 3px; //调整文字间距
-    border-radius: 3px; //btn圆角
-    width: 200px; //这里用指定宽度把btn拉得更长
-}
 //----ABOUT-----
 .sec-about {
     font-family: 'Open sans', sans-serif;
@@ -336,3 +337,65 @@ html {
      margin-top: 50px;
    }
   }
+//----搜索
+.form-group {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 250px; //加上width
+}
+
+// .search-form .form-group {
+//   float: right !important;
+//   transition: all 0.35s, border-radius 0s;
+//   width: 32px;
+//   height: 32px;
+//   background-color: #fff;
+//   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+//   border-radius: 25px;
+//   border: 1px solid #ccc;
+// }
+// .search-form .form-group input.form-control {
+//   padding-right: 20px;
+//   border: 0 none;
+//   background: transparent;
+//   box-shadow: none;
+//   display:block;
+// }
+// .search-form .form-group input.form-control::-webkit-input-placeholder {
+//   display: none;
+// }
+// .search-form .form-group input.form-control:-moz-placeholder {
+//   /* Firefox 18- */
+//   display: none;
+// }
+// .search-form .form-group input.form-control::-moz-placeholder {
+//   /* Firefox 19+ */
+//   display: none;
+// }
+// .search-form .form-group input.form-control:-ms-input-placeholder {
+//   display: none;
+// }
+// .search-form .form-group:hover,
+// .search-form .form-group.hover {
+//   width: 100%;
+//   border-radius: 4px 25px 25px 4px;
+// }
+// .search-form .form-group span.form-control-feedback {
+//   position: absolute;
+//   top: -1px;
+//   right: -2px;
+//   z-index: 2;
+//   display: block;
+//   width: 34px;
+//   height: 34px;
+//   line-height: 34px;
+//   text-align: center;
+//   color: #3596e0;
+//   left: initial;
+//   font-size: 14px;
+// }
