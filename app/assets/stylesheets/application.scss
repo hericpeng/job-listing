@@ -18,7 +18,11 @@
 @import "bootstrap";
 @import "font-awesome";
 
-
+//------common----
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
 html {
    position: relative;
    min-height: 100%;
@@ -27,7 +31,12 @@ html {
  body {
    /* Margin bottom by footer height */
    margin-top: 50px;
-   margin-bottom: 100px;
+   margin-bottom: 150px;
+   background-color: #FAFAFA;
+ }
+
+ .panel{
+   margin-top: 30px;
  }
 
 //---------Navbar---------
@@ -35,8 +44,10 @@ html {
 .navbar-default {
     background-color: #222222;
     border-color: #222222;
-    margin-bottom: 0;
+    margin-bottom: 100px;
     border-radius: 0;
+    height: 60px;
+
 }
 
 .navbar-fixed-top {
@@ -53,7 +64,7 @@ html {
 
 .navbar-default .navbar-brand {
     color: #757575;
-    padding: 10px 50px;
+    padding: 15px 100px;//调整Dream job的大小。
     line-height: 30px;
 }
 
@@ -65,12 +76,15 @@ html {
 
 .navbar-default .navbar-nav > li > a {
     color: #757575;
+    padding: 20px 30px 20px 0px;//调整注册登陆的大小和距离
+    font-size: 1.1em;//调整字体大小
 }
 
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
     color: #FF6F00;
     background-color: transparent;
+
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -337,19 +351,10 @@ html {
      margin-top: 50px;
    }
   }
-//----搜索
-// .form-group {
-//     margin-bottom: 10px;
-//     margin-top: 10px;
-// }
-// .input-group {
-//     position: relative;
-//     display: table;
-//     border-collapse: separate;
-//     width: 250px; //加上width
-// }
 
+//----搜索-------
 .search-form .form-group {
+  margin: 15px 40px 15px 0px;
   float: right !important;
   transition: all 0.35s, border-radius 0s;
   width: 32px;
@@ -385,9 +390,9 @@ html {
   width: 100%;
   border-radius: 4px 25px 25px 4px;
 }
-.search-form .form-group span.form-control-feedback {
+.search-button {
   position: absolute;
-  top: -1px;
+  top: -3px;
   right: -2px;
   z-index: 2;
   display: block;
@@ -395,7 +400,9 @@ html {
   height: 34px;
   line-height: 34px;
   text-align: center;
-  color: #3596e0;
+  color: #212121;
   left: initial;
   font-size: 14px;
+  background: none;
+  border: none;
 }
