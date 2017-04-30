@@ -17,54 +17,58 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-
 //------common----
-.col-centered{
-  float: none;
-  margin: 0 auto;
+.col-centered {
+    float: none;
+    margin: 0 auto;
 }
+
 html {
-   position: relative;
-   min-height: 100%;
- }
+    position: relative;
+    min-height: 100%;
+}
 
- body {
-   /* Margin bottom by footer height */
-   margin-top: 50px;
-   margin-bottom: 150px;
-   background-color: #FAFAFA;
- }
+body {
+    /* Margin bottom by footer height */
+    margin-top: 50px;
+    margin-bottom: 150px;
+    // background-color: #FAFAFA;
+    background: linear-gradient(180deg,#263238,#E0E0E0);
+}
 
- .panel{
-   margin-top: 30px;
- }
-
+.panel {
+    margin-top: 30px;
+}
 //---------Navbar---------
 
 .navbar-default {
-    background-color: #222222;
-    border-color: #222222;
+    // background-color: #222222;
+    // border-color: #222222;
+    background: transparent;
+    border-color: transparent;
     margin-bottom: 100px;
     border-radius: 0;
     height: 60px;
-
 }
 
 .navbar-fixed-top {
-    top: 0px;
+    top: 0;
+
 }
 
-.navbar-fixed-top, .navbar-fixed-bottom {
+
+.navbar-fixed-bottom,
+.navbar-fixed-top {
     position: fixed;
-    top: 0px;
+    top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
 }
 
 .navbar-default .navbar-brand {
-    color: #757575;
-    padding: 15px 100px;//调整Dream job的大小。
+    color: #FAFAFA;//主页的字体颜色
+    padding: 15px 100px; //调整Dream job的大小。
     line-height: 30px;
 }
 
@@ -75,16 +79,15 @@ html {
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #757575;
-    padding: 20px 30px 20px 0px;//调整注册登陆的大小和距离
-    font-size: 1.1em;//调整字体大小
+    color: #FAFAFA;
+    padding: 20px 30px 20px 0; //调整注册登陆的大小和距离
+    font-size: 1.1em; //调整字体大小
 }
 
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
     color: #FF6F00;
     background-color: transparent;
-
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -100,9 +103,7 @@ html {
     background-color: #FFE0B2;
     color: #212121;
 }
-
 //-----按钮
-
 .btn-danger {
     color: #fff; //字体颜色
     background-color: #EF6C00; //背景颜色
@@ -122,111 +123,107 @@ html {
     border-radius: 3px; //btn圆角
     width: 200px; //这里用指定宽度把btn拉得更长
 }
-
 //-----注册----
 @import url(http://fonts.googleapis.com/css?family=Roboto);
-
 /****** LOGIN MODAL ******/
 .loginmodal-container {
-  padding: 30px;
-  max-width: 350px;
-  width: 100% !important;
-  background-color: #E0E0E0;
-  margin: 0 auto;
-  border-radius: 2px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  font-family: roboto;
-  color: #263238;
+    padding: 30px;
+    max-width: 350px;
+    width: 100% !important;
+    background-color: #E0E0E0;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-family: roboto;
+    color: #263238;
 }
 
 .loginmodal-container h1 {
-  text-align: center;
-  font-size: 1.8em;
-  font-family: roboto;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: roboto;
 }
 
 .loginmodal-container input[type=submit] {
-  width: 100%;
-  display: block;
-  margin-bottom: 10px;
-  position: relative;
-  background-color: #A9A9A9;
-
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: #A9A9A9;
 }
 
-.loginmodal-container input[type=text], input[type=password] {
-  height: 44px;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 10px;
-  -webkit-appearance: none;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  border-top: 1px solid #c0c0c0;
-  /* border-radius: 2px; */
-  padding: 0 8px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+.loginmodal-container input[type=text],
+input[type=password] {
+    height: 44px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    /* border-radius: 2px; */
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-.loginmodal-container input[type=text]:hover, input[type=password]:hover {
-  border: 1px solid #b9b9b9;
-  border-top: 1px solid #a0a0a0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+.loginmodal-container input[type=text]:hover,
+input[type=password]:hover {
+    border: 1px solid #b9b9b9;
+    border-top: 1px solid #a0a0a0;
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .loginmodal {
-  text-align: center;
-  font-size: 14px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 700;
-  height: 36px;
-  padding: 0 8px;
-/* border-radius: 3px; */
-/* -webkit-user-select: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+    /* border-radius: 3px; */
+    /* -webkit-user-select: none;
   user-select: none; */
 }
 
 .loginmodal-submit {
-  /* border: 1px solid #3079ed; */
-  border: 0px;
-  color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1);
-  background-color: #4d90fe;
-  padding: 17px 0px;
-  font-family: roboto;
-  font-size: 14px;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+    /* border: 1px solid #3079ed; */
+    border: 0;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: #4d90fe;
+    padding: 17px 0;
+    font-family: roboto;
+    font-size: 14px;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
 .loginmodal-submit:hover {
-  /* border: 1px solid #2f5bb7; */
-  border: 0px;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
-  background-color: #357ae8;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+    /* border: 1px solid #2f5bb7; */
+    border: 0;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #357ae8;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
 .loginmodal-container a {
-  text-decoration: none;
-  color: #666;
-  font-weight: 400;
-  text-align: center;
-  display: inline-block;
-  opacity: 0.6;
-  transition: opacity ease 0.5s;
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity ease 0.5s;
 }
 
-.login-help{
-  font-size: 12px;
+.login-help {
+    font-size: 12px;
 }
-
-
 //---------Video-------
-
 .video-background {
     position: fixed;
     right: 0;
@@ -243,7 +240,6 @@ html {
 //   margin-bottom: 100px; /* 一定要和footer的高度一致 */
 //   min-height: 100%;
 // }
-
 //---------Box---------
 .box {
     // // background-image: url("header.jpg");
@@ -252,9 +248,12 @@ html {
     // margin: 0 -30px;
     .box-inner {
         background-color: rgba(0, 0, 0, 0.3);
-        padding-top: 90px;
+        padding-top: 120px;
         padding-bottom: 90px;
+        margin-top: -50px;
+
         letter-spacing: 15px;
+        //  height: 600px;
     }
 
     .title {
@@ -264,6 +263,7 @@ html {
         margin-bottom: 80px;
         margin-top: 0;
         padding-top: 20px;
+
     }
 
     .slogan {
@@ -282,7 +282,6 @@ html {
         color: white;
     }
 }
-
 //----ABOUT-----
 .sec-about {
     font-family: 'Open sans', sans-serif;
@@ -335,74 +334,93 @@ html {
     color: #BDBDBD;
     font-weight: 400;
 }
-
 //---------Footer---------
 .footer {
-   position: absolute;
-   bottom: 0;
-   width: 100%;
-   /* Set the fixed height of the footer here */
-   height: 150px;
-   background-color: #222222;
-   margin: 0 -15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 150px;
+    background-color: #E0E0E0;
+    margin: 0 -15px;
 
-   p {
-      color: white;
-     margin-top: 50px;
-   }
-  }
+    p {
+        color: #222222;
+        margin-top: 50px;
+    }
+}
+
+
 
 //----搜索-------
 .search-form .form-group {
-  margin: 15px 40px 15px 0px;
-  float: right !important;
-  transition: all 0.35s, border-radius 0s;
-  width: 32px;
-  height: 32px;
-  background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  border-radius: 25px;
-  border: 1px solid #ccc;
+    margin: 15px 40px 15px 0;
+    float: right !important;
+    transition: all 0.35s, border-radius 0s;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 25px;
+    border: 1px solid #ccc;
 }
+
 .search-form .form-group input.form-control {
-  padding-right: 20px;
-  border: 0 none;
-  background: transparent;
-  box-shadow: none;
-  display:block;
+    padding-right: 20px;
+    border: 0 none;
+    background: transparent;
+    box-shadow: none;
+    display: block;
 }
+
 .search-form .form-group input.form-control::-webkit-input-placeholder {
-  display: none;
+    display: none;
 }
+
 .search-form .form-group input.form-control:-moz-placeholder {
-  /* Firefox 18- */
-  display: none;
+    /* Firefox 18- */
+    display: none;
 }
+
 .search-form .form-group input.form-control::-moz-placeholder {
-  /* Firefox 19+ */
-  display: none;
+    /* Firefox 19+ */
+    display: none;
 }
+
 .search-form .form-group input.form-control:-ms-input-placeholder {
-  display: none;
+    display: none;
 }
-.search-form .form-group:hover,
-.search-form .form-group.hover {
-  width: 100%;
-  border-radius: 4px 25px 25px 4px;
+
+.search-form .form-group.hover,
+.search-form .form-group:hover {
+    width: 100%;
+    border-radius: 4px 25px 25px 4px;
 }
+
 .search-button {
-  position: absolute;
-  top: -3px;
-  right: -2px;
-  z-index: 2;
-  display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-  text-align: center;
-  color: #212121;
-  left: initial;
-  font-size: 14px;
-  background: none;
-  border: none;
+    position: absolute;
+    top: -3px;
+    right: -2px;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #212121;
+    left: initial;
+    font-size: 14px;
+    background: none;
+    border: none;
+}
+//-------jobs.views---
+
+
+.bg-jobs {
+    background: linear-gradient(180deg,#263238,#E0E0E0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -50px;
+    padding-top: 100px;
+    padding-bottom: 200px;
 }

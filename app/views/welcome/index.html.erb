@@ -1,29 +1,26 @@
-
-  <div class="job-header">
+<div class="job-header">
     <%= video_tag "Show.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video-background" %>
-    <a class="logo-mobile show" href="/" tabindex="-1">
+    <a class="logo-mobile show" data-turbolinks="false" href="/" tabindex="-1">
         <div class="icn icn-mint-leaf-mobile"></div>
-      </a>
+    </a>
     <div class="row box">
-      <div class="box-inner">
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1 class="title">Discover Your Dream Job Here</h1>
-        <p class="slogan">
-          <br>
-          <br>
-        </p>
-        <p class="lead">
-          <%= link_to 'Start', jobs_path, class: 'btn btn-danger' %>
-        </p>
-      </div>
+        <div class="box-inner">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 class="title">Discover Your Dream Job Here</h1>
+            <p class="slogan">
+                <br>
+                <br>
+            </p>
+            <p class="lead">
+                <%= link_to 'Start', jobs_path, class: 'btn btn-danger'%>
+            </p>
+        </div>
     </div>
-  </div>
-
-
-  <!-- <div class="job-header">
+</div>
+<!-- <div class="job-header">
     <%= video_tag "Show.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video-background" %>
   <section id="home" class="sec-main">
       <h1 class="main-heading">Discover Your Best Future Here</h1>
@@ -32,74 +29,79 @@
       </p>
   </section>
 </div> -->
-
-    <section id="about" class="sec-about">
-      <div class="container">
+<section id="about" class="sec-about">
+    <div class="container">
         <h1>About Us</h1>
-
         <hr />
-
         <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
-            <p>Hi, 欢迎来到Dream Job，在这里你可以根据名称、城市、职位来搜索自己的Dream Job。我们致力于为访客提供高匹配率的工作和专业的简历撰写指导。
+            <div class="col-sm-6 col-sm-offset-3">
+                <p>Hi, 欢迎来到Dream Job，在这里你可以根据名称、城市、职位来搜索自己的Dream Job。我们致力于为访客提供高匹配率的工作和专业的简历撰写指导。
               Welcome Dream Job，Start You Dream！
           </div>
+            </div>
         </div>
-      </div>
     </section>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">查看属于你的Dream Job</h2>
+                    <p class="lead">Dream Job可以根据需求，制定出专属的Job</p>
+                    <p class="lead">支持名称、城市、公司搜索</p>
+                    <p class="lead">高匹配率帮您节约时间</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">撰写你的Dream Job简历</h2>
+                    <p class="lead">根据自己的心仪的Job撰写自己的Dream Resume</p>
+                    <p class="lead">如果不知道如何写出专业的建立，那可以去全栈朱英楠师兄创作的 <a target="_blank" href="http://www.jianliheike.com">简历黑客</a> 看看哦！</p>
+                    <p class="lead">超多的专业简历模板等着你哦！</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <%= image_tag 'pic-2.jpg', class: 'img-responsive' %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">拥有自己的Dream Job<br>
+                    </h2>
+                    <p class="lead">再也不会因为工作而烦恼，愿你每一天与快乐为伴。</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <%= image_tag 'pic-3.jpg', class: 'img-responsive' %>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-
-  <div class="content-section-a">
-   <div class="container">
-     <div class="row">
-       <div class="col-lg-5 col-sm-6">
-         <hr class="section-heading-spacer">
-         <div class="clearfix"></div>
-         <h2 class="section-heading">查看属于你的Dream Job</h2>
-         <p class="lead">Dream Job可以根据需求，制定出专属的Job</p>
-         <p class="lead">支持名称、城市、公司搜索</p>
-         <p class="lead">高匹配率帮您节约时间</p>
-       </div>
-       <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-         <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
-       </div>
-     </div>
-   </div>
- </div>
-
- <div class="content-section-b">
-   <div class="container">
-     <div class="row">
-       <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-         <hr class="section-heading-spacer">
-         <div class="clearfix"></div>
-         <h2 class="section-heading">撰写你的Dream Job简历</h2>
-         <p class="lead">根据自己的心仪的Job撰写自己的Dream Resume</p>
-        <p class="lead">如果不知道如何写出专业的建立，那可以去全栈朱英楠师兄创作的 <a target="_blank" href="http://www.jianliheike.com">简历黑客</a> 看看哦！</p>
-        <p class="lead">超多的专业简历模板等着你哦！</p>
-       </div>
-       <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-         <%= image_tag 'pic-2.jpg', class: 'img-responsive' %>
-       </div>
-     </div>
-   </div>
- </div>
-
- <div class="content-section-a">
-   <div class="container">
-     <div class="row">
-       <div class="col-lg-5 col-sm-6">
-         <hr class="section-heading-spacer">
-         <div class="clearfix"></div>
-         <h2 class="section-heading">拥有自己的Dream Job<br></h2>
-         <p class="lead">再也不会因为工作而烦恼，愿你每一天与快乐为伴。</p>
-       </div>
-       <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-         <%= image_tag 'pic-3.jpg', class: 'img-responsive' %>
-       </div>
-     </div>
-   </div>
- </div>
+    <script>
+      $(document).ready(function(){
+        //  $(".navbar-fixed-top").css("background-color", "transparent"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+        //  $(".navbar-fixed-top").css("border-color", "transparent"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+      $(window).scroll(function() { // check if scroll event happened
+         if ($(document).scrollTop() > 30) { // check if user scrolled more than 50 from top of the browser window
+           $(".navbar-fixed-top").css("background-color", "#3D3D3D"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+         } else {
+           $(".navbar-fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
+         }
+       });
+      });
+    </script>
