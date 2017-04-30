@@ -335,19 +335,65 @@ input[type=password]:hover {
     font-weight: 400;
 }
 //---------Footer---------
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 150px;
-    background-color: #E0E0E0;
-    margin: 0 -15px;
+// .footer {
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     /* Set the fixed height of the footer here */
+//     height: 150px;
+//     background-color: #E0E0E0;
+//     margin: 0 -15px;
+//
+//     p {
+//         color: #222222;
+//         margin-top: 50px;
+//     }
+// }
 
-    p {
-        color: #222222;
-        margin-top: 50px;
-    }
+
+/*Footer*/
+
+footer {
+  background: #000;
+}
+
+.soc-media-ul {
+  display: flex;
+  justify-content: center;
+}
+
+.soc-media-ul li:not(:first-child) a {
+  margin-left: 1em;
+}
+
+.soc-media-ul a {
+  display: block;
+  padding: 0.5em .85rem;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid;
+
+  &:hover,
+  &:focus {
+    color: red;
+  }
+}
+
+/* footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #111;
+  text-align: center;
+  .container {
+    margin-top: 20px;
+    color: #fff;
+    width: 100%;
+  }
 }
 
 
