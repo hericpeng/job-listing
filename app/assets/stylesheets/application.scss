@@ -17,6 +17,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+
+
 //------common----
 .col-centered {
     float: none;
@@ -50,25 +53,25 @@ body {
     border-radius: 0;
     height: 60px;
 }
-
-.navbar-fixed-top {
-    top: 0;
-
-}
-
-
-.navbar-fixed-bottom,
-.navbar-fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
+//
+// .navbar-fixed-top {
+//     top: 0;
+//
+// }
+//
+//
+// .navbar-fixed-bottom,
+// .navbar-fixed-top {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     z-index: 1030;
+// }
 
 .navbar-default .navbar-brand {
     color: #FAFAFA;//主页的字体颜色
-    padding: 15px 100px; //调整Dream job的大小。
+    padding: 15px 150px; //调整Dream job的大小。
     line-height: 30px;
 }
 
@@ -80,7 +83,7 @@ body {
 
 .navbar-default .navbar-nav > li > a {
     color: #FAFAFA;
-    padding: 20px 30px 20px 0; //调整注册登陆的大小和距离
+    padding: 35px 30px 20px 0; //调整注册登陆的大小和距离
     font-size: 1.1em; //调整字体大小
 }
 
@@ -106,13 +109,31 @@ body {
 //-----按钮
 .btn-danger {
     color: #fff; //字体颜色
-    background-color: #EF6C00; //背景颜色
-    border-color: #EF6C00; //边框颜色
+    border: 2px solid #fff;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Avenir Next LT W01 Demi;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .2em;
+    height: 68px;
+    line-height: 1.2;
+    padding: 22px 30px;
+    text-align: center;
+    transition: .1s ease-in-out;
+    text-transform: uppercase;
+    width: 255px;
+    will-change: background-color,border-color,color;
+    
 }
 
 .btn-danger:hover {
-    background-color: #E65100; //鼠标放置在btn上的背景颜色
-    border-color: #E65100; //鼠标放置在btn上的边框颜色
+    // background-color: #E65100; //鼠标放置在btn上的背景颜色
+    // border-color: #E65100; //鼠标放置在btn上的边框颜色
+    background-color: #0dc3ad;
+border-color: #0dc3ad;
+color: #fff;
 }
 
 .btn-group-lg > .btn,
@@ -123,106 +144,107 @@ body {
     border-radius: 3px; //btn圆角
     width: 200px; //这里用指定宽度把btn拉得更长
 }
+
 //-----注册----
-@import url(http://fonts.googleapis.com/css?family=Roboto);
-/****** LOGIN MODAL ******/
-.loginmodal-container {
-    padding: 30px;
-    max-width: 350px;
-    width: 100% !important;
-    background-color: #E0E0E0;
-    margin: 0 auto;
-    border-radius: 2px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    font-family: roboto;
-    color: #263238;
-}
-
-.loginmodal-container h1 {
-    text-align: center;
-    font-size: 1.8em;
-    font-family: roboto;
-}
-
-.loginmodal-container input[type=submit] {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    position: relative;
-    background-color: #A9A9A9;
-}
-
-.loginmodal-container input[type=text],
-input[type=password] {
-    height: 44px;
-    font-size: 16px;
-    width: 100%;
-    margin-bottom: 10px;
-    -webkit-appearance: none;
-    background: #fff;
-    border: 1px solid #d9d9d9;
-    border-top: 1px solid #c0c0c0;
-    /* border-radius: 2px; */
-    padding: 0 8px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
-.loginmodal-container input[type=text]:hover,
-input[type=password]:hover {
-    border: 1px solid #b9b9b9;
-    border-top: 1px solid #a0a0a0;
-    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.loginmodal {
-    text-align: center;
-    font-size: 14px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    height: 36px;
-    padding: 0 8px;
-    /* border-radius: 3px; */
-    /* -webkit-user-select: none;
-  user-select: none; */
-}
-
-.loginmodal-submit {
-    /* border: 1px solid #3079ed; */
-    border: 0;
-    color: #fff;
-    text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #4d90fe;
-    padding: 17px 0;
-    font-family: roboto;
-    font-size: 14px;
-    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
-}
-
-.loginmodal-submit:hover {
-    /* border: 1px solid #2f5bb7; */
-    border: 0;
-    text-shadow: 0 1px rgba(0,0,0,0.3);
-    background-color: #357ae8;
-    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
-}
-
-.loginmodal-container a {
-    text-decoration: none;
-    color: #666;
-    font-weight: 400;
-    text-align: center;
-    display: inline-block;
-    opacity: 0.6;
-    transition: opacity ease 0.5s;
-}
-
-.login-help {
-    font-size: 12px;
-}
+// @import url(http://fonts.googleapis.com/css?family=Roboto);
+// /****** LOGIN MODAL ******/
+// .loginmodal-container {
+//     padding: 30px;
+//     max-width: 350px;
+//     width: 100% !important;
+//     background-color: #E0E0E0;
+//     margin: 0 auto;
+//     border-radius: 2px;
+//     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+//     overflow: hidden;
+//     font-family: roboto;
+//     color: #263238;
+// }
+//
+// .loginmodal-container h1 {
+//     text-align: center;
+//     font-size: 1.8em;
+//     font-family: roboto;
+// }
+//
+// .loginmodal-container input[type=submit] {
+//     width: 100%;
+//     display: block;
+//     margin-bottom: 10px;
+//     position: relative;
+//     background-color: #A9A9A9;
+// }
+//
+// .loginmodal-container input[type=text],
+// input[type=password] {
+//     height: 44px;
+//     font-size: 16px;
+//     width: 100%;
+//     margin-bottom: 10px;
+//     -webkit-appearance: none;
+//     background: #fff;
+//     border: 1px solid #d9d9d9;
+//     border-top: 1px solid #c0c0c0;
+//     /* border-radius: 2px; */
+//     padding: 0 8px;
+//     box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+// }
+//
+// .loginmodal-container input[type=text]:hover,
+// input[type=password]:hover {
+//     border: 1px solid #b9b9b9;
+//     border-top: 1px solid #a0a0a0;
+//     -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+//     -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+//     box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+// }
+//
+// .loginmodal {
+//     text-align: center;
+//     font-size: 14px;
+//     font-family: 'Arial', sans-serif;
+//     font-weight: 700;
+//     height: 36px;
+//     padding: 0 8px;
+//     /* border-radius: 3px; */
+//     /* -webkit-user-select: none;
+//   user-select: none; */
+// }
+//
+// .loginmodal-submit {
+//     /* border: 1px solid #3079ed; */
+//     border: 0;
+//     color: #fff;
+//     text-shadow: 0 1px rgba(0,0,0,0.1);
+//     background-color: #4d90fe;
+//     padding: 17px 0;
+//     font-family: roboto;
+//     font-size: 14px;
+//     /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+// }
+//
+// .loginmodal-submit:hover {
+//     /* border: 1px solid #2f5bb7; */
+//     border: 0;
+//     text-shadow: 0 1px rgba(0,0,0,0.3);
+//     background-color: #357ae8;
+//     /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+// }
+//
+// .loginmodal-container a {
+//     text-decoration: none;
+//     color: #666;
+//     font-weight: 400;
+//     text-align: center;
+//     display: inline-block;
+//     opacity: 0.6;
+//     transition: opacity ease 0.5s;
+// }
+//
+// .login-help {
+//     font-size: 12px;
+// }
 //---------Video-------
 .video-background {
     position: fixed;
@@ -260,10 +282,11 @@ input[type=password]:hover {
         text-align: center;
         color: #FAFAFA;
         font-size: 50px;
-        margin-bottom: 80px;
-        margin-top: 0;
+      // font-weight: 800;
+        margin-bottom: 50px;
+        margin-top: 80px;
         padding-top: 20px;
-
+        // font-family: Quarto A,Quarto B,Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;
     }
 
     .slogan {
@@ -334,61 +357,52 @@ input[type=password]:hover {
     color: #BDBDBD;
     font-weight: 400;
 }
+
+
 //---------Footer---------
-// .footer {
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-//     /* Set the fixed height of the footer here */
-//     height: 150px;
-//     background-color: #E0E0E0;
-//     margin: 0 -15px;
-//
-//     p {
-//         color: #222222;
-//         margin-top: 50px;
-//     }
-// }
-
-
-/*Footer*/
 
 footer {
-  background: #000;
+  background: #3D3D3D;
 }
 
 .soc-media-ul {
   display: flex;
   justify-content: center;
+  list-style-type: none;
+  margin-left: -50px;
 }
 
 .soc-media-ul li:not(:first-child) a {
-  margin-left: 1em;
+  margin-left: 1.5em;
 }
 
 .soc-media-ul a {
   display: block;
   padding: 0.5em .85rem;
   margin-top: 30px;
-  font-size: 1rem;
-  color: #fff;
-  border-radius: 50%;
-  border: 2px solid;
 
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 20%;
+  border: 3px solid;
+  transition: 0.35s;
   &:hover,
   &:focus {
     color: red;
+    text-decoration: none;
   }
 }
 
 /* footer */
 .footer {
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 100%;
   height: 150px;
-  background-color: #111;
+  background-color: #263238;
   text-align: center;
+  overflow: hidden;
   .container {
     margin-top: 20px;
     color: #fff;
@@ -400,7 +414,7 @@ footer {
 
 //----搜索-------
 .search-form .form-group {
-    margin: 15px 40px 15px 0;
+    margin: 30px 40px 15px 0;
     float: right !important;
     transition: all 0.35s, border-radius 0s;
     width: 32px;
@@ -458,15 +472,4 @@ footer {
     font-size: 14px;
     background: none;
     border: none;
-}
-//-------jobs.views---
-
-
-.bg-jobs {
-    background: linear-gradient(180deg,#263238,#E0E0E0);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: -50px;
-    padding-top: 100px;
-    padding-bottom: 200px;
 }

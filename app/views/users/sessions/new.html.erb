@@ -1,0 +1,38 @@
+<div style="margin-top:50px;margin-bottom:30px;line-height:275%;">
+    <h1 style="text-align: center;font-family:'Lobster',cursive;font-size:275%;color:rgb(62,146,190);">Welcome Back!</h1>
+  </div>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
+  <div class="form-group">
+      <div class="col-lg-4 col-lg-offset-4">
+          <%= f.email_field :email, autofocus: true , class: "form-control" , :style => "border: solid 1px white;", placeholder: "Email Address"%>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-lg-4 col-lg-offset-4">
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password"%>
+      </div>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+  <div class="form-group">
+      <div class="col-sm-4 col-sm-offset-4">
+          <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+      </div>
+  </div>
+  <% end %>
+
+  <div class="form-group">
+      <div class="col-lg-4 col-lg-offset-4">
+          <%= f.submit "Login in", class: 'btn btn-sm btn-default',:style => "border: none;color:white;width:100%;background-color:rgb(62,146,190);border-radius:50px;"  %>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-sm-4 col-sm-offset-4">
+          <%= render "devise/shared/links" %>
+      </div>
+  </div>
+
+  <% end %>

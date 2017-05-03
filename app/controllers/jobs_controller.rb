@@ -1,14 +1,22 @@
 class JobsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
     before_action :validate_search_key, only: [:search]
+    def video
+      render :layout => false
+    end
     def index
-        @jobs = case params[:order]
-                when 'by_lower_bound'
-                    Job.published.order('wage_lower_bound DESC')
-                when 'by_upper_bound'
-                    Job.published.order('wage_upper_bound DESC')
-                else
-                    Job.published.order('created_at DESC')
+        @jobs = Job.all
+        if params[:search]
+            @jobs = Job.published.search(params[:search]).recent.paginate(page: params[:page], per_page: 5)
+        elsif
+          @jobs = case params[:order]
+                  when 'by_lower_bound'
+                      @jobs = Job.published.order('wage_lower_bound DESC').paginate(page: params[:page], per_page: 5)
+                  when 'by_upper_bound'
+                      @jobs = Job.published.order('wage_upper_bound DESC').paginate(page: params[:page], per_page: 5)
+                  else
+                      @jobs = Job.published.recent.paginate(page: params[:page], per_page: 5)
+          end
         end
     end
 
@@ -75,5 +83,4 @@ class JobsController < ApplicationController
     def job_params
         params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :category, :company, :city)
     end
-    
 end

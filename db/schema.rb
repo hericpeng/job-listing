@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20170423230505) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "attackment"
     t.string   "attachment"
   end
 
