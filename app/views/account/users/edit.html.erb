@@ -1,0 +1,51 @@
+<body style="padding:50px 550px;">
+    <h2> 修改个人资料 </h2>
+    <%= simple_form_for [:account, @user] do |f| %>
+        <div>
+            <%= f.input :username, :label =>"用户名" %>
+            <%= f.input :email, :label =>"邮箱地址" %>
+            <p class="row">
+                <%= link_to("放弃更新", account_user_path(current_user), class: "seed" ) %>
+                <%= f.submit "提交", class: "seed" %>
+        </p>
+    </div>
+<% end %>
+</body>
+<style>
+    .seed {
+            margin: 50px  8px;
+            text-align: center;
+            color: #fff; //字体颜色
+            border-width: 2px;
+            border-style: solid;
+            border-color: #fff;
+            background: none;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Avenir Next LT W01 Demi;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: .2em;
+            height: 50px;
+            line-height: 1.2;
+            padding: 15px 30px;
+            text-align: center;
+            transition: .1s ease-in-out;
+            text-transform: uppercase;
+            width: 150px;
+            will-change: background-color,border-color,color;
+
+        }
+
+        .seed:hover {
+            background-color: #0dc3ad;
+        border-color: #0dc3ad;
+        color: #fff;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #BDBDBD;
+            font-weight: 400;
+        }
+</style>
