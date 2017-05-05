@@ -38,15 +38,17 @@
   padding: 15px;
   border-radius: 5px;
   .btn-info{
-      color: #fff;
-      background-color: #0dc3ad;
+      color: #111;
+      // background-color: #0dc3ad;
+      // border-color: #0dc3ad;
+      background-color: #fff;
       border-color: #0dc3ad;
   }
   .btn-info:hover {
       color: #fff;
 
-      background-color: #263238;
-      border-color: #263238;
+      background-color: #0dc3ad;
+      border-color: #0dc3ad;
   }
   span {
     // margin-right: 25px;

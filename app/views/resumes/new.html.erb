@@ -1,9 +1,54 @@
-<h3>提交简历到<%= @job.title %></h3>
+<body style="padding:50px 300px;">
+<h3 style="text-align:center;">投递简历到:<%= @job.title %></h3>
 
 <hr>
 
 <%= simple_form_for [@job, @resume] do |f| %>
   <%= f.input :content %>
+  <br>
   <%= f.input :attachment %>
-  <%= f.submit "送出" %>
+  <br>
+  <br>
+  <br>
+  <!-- <%= f.submit "确认投递" ,:class => "seed" %> -->
+  <div style="text-align:center;">
+  <div class="seed">
+      <%= link_to("投递简历",new_job_resume_path(@job)) %>
+  </div>
+  </div>
+  <br>
 <% end %>
+</body>
+
+<style>
+    .seed {
+      margin-top: 50px;
+    text-align: center;
+        color: #fff; //字体颜色
+        border-width: 2px;
+      border-style: solid;
+      border-color: #fff;
+        background: none;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Avenir Next LT W01 Demi;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: .2em;
+        height: 68px;
+        line-height: 1.2;
+        padding: 22px 30px;
+        text-align: center;
+        transition: .1s ease-in-out;
+        text-transform: uppercase;
+        width: 220px;
+        will-change: background-color,border-color,color;
+
+    }
+
+    .seed:hover {
+        background-color: #0dc3ad;
+    border-color: #0dc3ad;
+    color: #fff;
+    }
+</style>

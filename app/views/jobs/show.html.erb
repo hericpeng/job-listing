@@ -1,9 +1,44 @@
-<h1> <%= @job.title %> </h1>
+<body style="padding:50px 300px;">
+    <h1 > <%= @job.title %> </h1>
+    <p style="padding-top:30px;">
+        <%= simple_format(@job.description) %>
+    </p>
+    <div style="text-align:center;">
+    <div class="seed">
+        <%= link_to("提交简历",new_job_resume_path(@job)) %>
+    </div>
+  </div>
+</body>
 
-<p>
-  <%= simple_format(@job.description) %>
+<style>
+    .seed {
+      margin-top: 50px;
+    text-align: center;
+        color: #fff; //字体颜色
+        border-width: 2px;
+      border-style: solid;
+      border-color: #fff;
+        background: none;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Avenir Next LT W01 Demi;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: .2em;
+        height: 68px;
+        line-height: 1.2;
+        padding: 22px 30px;
+        text-align: center;
+        transition: .1s ease-in-out;
+        text-transform: uppercase;
+        width: 220px;
+        will-change: background-color,border-color,color;
 
-</p>
-<div class="text-center">
-  <%= link_to("提交简历",new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
-</div>
+    }
+
+    .seed:hover {
+        background-color: #0dc3ad;
+    border-color: #0dc3ad;
+    color: #fff;
+    }
+</style>

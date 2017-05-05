@@ -36,7 +36,9 @@ body {
     margin-top: 50px;
     margin-bottom: 150px;
     // background-color: #FAFAFA;
-    background: linear-gradient(180deg,#263238,#E0E0E0);
+    // background: linear-gradient(180deg,#263238,#E0E0E0);
+    background: linear-gradient(180deg,#78909C,#E0E0E0);
+
 }
 
 .panel {
@@ -71,7 +73,7 @@ body {
 
 .navbar-default .navbar-brand {
     color: #FAFAFA;//主页的字体颜色
-    padding: 15px 150px; //调整Dream job的大小。
+    padding: 20px 150px; //调整Dream job的大小。
     line-height: 30px;
 }
 
